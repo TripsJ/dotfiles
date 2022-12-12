@@ -6,3 +6,4 @@ alias cls="clear"
 alias gp="git push"
 alias gaa="git add *"
 alias gc='git commit -m'
+alias config='/usr/bin/git --git-dir=/home/sulumar/.dotfiles/ --work-tree=/home/sulumar'

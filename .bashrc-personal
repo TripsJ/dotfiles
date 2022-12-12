@@ -1,0 +1,8 @@
+alias cls='clear'
+alias bcd='cd ~/Documents/BeCode'
+alias BCD='cd ~/Documents/BeCode'
+alias setrepo='../../setrepo.sh'
+alias cls="clear"
+alias gp="git push"
+alias gaa="git add *"
+alias gc='git commit -m'

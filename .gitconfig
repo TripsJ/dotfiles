@@ -1,0 +1,12 @@
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[user]
+	name = Jérôme Trips
+	email = jerome.trips@tutanota.com
+[init]
+	defaultBranch = main
+[core]
+    editor = micro

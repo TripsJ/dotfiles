@@ -9,7 +9,7 @@ export OSH=/home/sulumar/.oh-my-bash
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
-OSH_THEME="brunton"
+OSH_THEME="powerline-multiline"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"

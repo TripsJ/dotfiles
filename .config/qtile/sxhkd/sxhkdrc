@@ -59,7 +59,7 @@ super + F12
 # SUPER + ... KEYS
 #################################################################
 
-#Atom
+#VS-Code
 super + e
     code
 
@@ -87,9 +87,9 @@ super + x
 super + r
     rofi-theme-selector
 
-#Alacritty Transparency
-super + t
-	alacritty_opoacity_toggle	 
+#Discord
+super + d
+	discord 
 
 #Pavucontrol
 super + v

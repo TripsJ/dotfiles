@@ -1,4 +1,3 @@
-
 alias cls='clear'
 alias bcd='cd ~/Documents/BeCode'
 alias BCD='cd ~/Documents/BeCode'
@@ -8,5 +7,6 @@ alias gp="git push"
 alias gaa="git add *"
 alias gc='git commit -m'
 alias config='/usr/bin/git --git-dir=/home/sulumar/.dotfiles/ --work-tree=/home/sulumar'
-
+alias troff='killall picom'
+alias tron='picom -b --config ~/.config/qtile/scripts/picom.conf'
 export PATH=$HOME/Scripts:$PATH

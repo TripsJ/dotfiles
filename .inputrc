@@ -1,1 +1,17 @@
+$include /etc/inputrc 
+#Includes the global.inputrc
 set enable-bracketed-paste 0
+# disables the addition of brackets during paste
+"\C-p":history-search-backward
+"\C-n":history-search-forward
+# use Crtl N and CrtlP to search through history
+
+set colored-stats On
+# Color completitions according to filetype
+set completion-ignore-case On
+
+set completion-prefix-display-length 3
+set mark-symlinked-directories On
+set show-all-if-ambiguous On
+set show-all-if-unmodified On
+set visible-stats On

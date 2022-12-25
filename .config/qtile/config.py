@@ -34,7 +34,7 @@ from libqtile import layout, bar, widget, hook
 from libqtile.config import Click, Drag, Group, Key, Match, Screen, Rule
 from libqtile.command import lazy
 from libqtile.widget import Spacer
-#import arcobattery
+import arcobattery
 
 #mod4 or mod = super key
 mod = "mod4"
@@ -356,20 +356,20 @@ def init_widgets_list():
                #          threshold = 80
                #          ),
                # # battery option 1  ArcoLinux Horizontal icons do not forget to import arcobattery at the top
-               # widget.Sep(
-               #          linewidth = 1,
-               #          padding = 10,
-               #          foreground = colors[2],
-               #          background = colors[1]
-               #          ),
-               # arcobattery.BatteryIcon(
-               #          padding=0,
-               #          scale=0.7,
-               #          y_poss=2,
-               #          theme_path=home + "/.config/qtile/icons/battery_icons_horiz",
-               #          update_interval = 5,
-               #          background = colors[1]
-               #          ),
+               widget.Sep(
+                         linewidth = 1,
+                         padding = 10,
+                         foreground = colors[2],
+                         background = colors[1]
+                         ),
+                arcobattery.BatteryIcon(
+                         padding=0,
+                         scale=0.7,
+                         y_poss=2,
+                         theme_path=home + "/.config/qtile/icons/battery_icons_horiz",
+                         update_interval = 5,
+                         background = colors[1]
+                         ),
                # # battery option 2  from Qtile
                # widget.Sep(
                #          linewidth = 1,
@@ -377,13 +377,6 @@ def init_widgets_list():
                #          foreground = colors[2],
                #          background = colors[1]
                #          ),
-                widget.Battery(
-                         font="Noto Sans",
-                         update_interval = 10,
-                         fontsize = 12,
-                         foreground = colors[5],
-                         background = colors[1],
-	                     ),
                # widget.TextBox(
                #          font="FontAwesome",
                #          text="  ",

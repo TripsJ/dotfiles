@@ -224,8 +224,8 @@ for i in groups:
 def init_layout_theme():
     return {"margin":5,
             "border_width":2,
-            "border_focus": "#5e81ac",
-            "border_normal": "#4c566a"
+            "border_focus": "#232b2b",
+            "border_normal": "#3b444b"
             }
 
 layout_theme = init_layout_theme()
@@ -246,15 +246,15 @@ layouts = [
 # COLORS FOR THE BAR
 #Theme name : ArcoLinux Default
 def init_colors():
-    return [["#2F343F", "#2F343F"], # color 0
-            ["#2F343F", "#2F343F"], # color 1
+    return [["#3b444b", "#3b444b"], # color 0
+            ["#3b444b", "#3b444b"], # color 1
             ["#c0c5ce", "#c0c5ce"], # color 2
             ["#fba922", "#fba922"], # color 3
             ["#3384d0", "#3384d0"], # color 4
             ["#f3f4f5", "#f3f4f5"], # color 5
             ["#cd1f3f", "#cd1f3f"], # color 6
             ["#62FF00", "#62FF00"], # color 7
-            ["#6790eb", "#6790eb"], # color 8
+            ["#232b2b", "#232b2b"], # color 8
             ["#a9a9a9", "#a9a9a9"]] # color 9
 
 
@@ -264,7 +264,7 @@ colors = init_colors()
 # WIDGETS FOR THE BAR
 
 def init_widgets_defaults():
-    return dict(font="Noto Sans",
+    return dict(font="FiraCode",
                 fontsize = 12,
                 padding = 2,
                 background=colors[1])
@@ -284,7 +284,7 @@ def init_widgets_list():
                         disable_drag = True,
                         active = colors[9],
                         inactive = colors[5],
-                        rounded = False,
+                        rounded = True,
                         highlight_method = "text",
                         this_current_screen_border = colors[8],
                         foreground = colors[2],

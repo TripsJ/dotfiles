@@ -190,7 +190,7 @@ groups = []
 group_names = ["ampersand", "eacute", "quotedbl", "apostrophe", "parenleft", "section", "egrave", "exclam", "ccedilla", "agrave",]
 
 #group_labels = ["1 ", "2 ", "3 ", "4 ", "5 ", "6 ", "7 ", "8 ", "9 ", "0",]
-group_labels = ["", "", "", "", "", "", "", "", "", "",]
+group_labels = ["", "", "", "", "", "", "", "", "", "",]
 #group_labels = ["Web", "Edit/chat", "Image", "Gimp", "Meld", "Video", "Vb", "Files", "Mail", "Music",]
 
 group_layouts = ["monadtall", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall",]
@@ -274,7 +274,7 @@ widget_defaults = init_widgets_defaults()
 def init_widgets_list():
     prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
     widgets_list = [
-               widget.GroupBox(font="FontAwesome",
+            widget.GroupBox(font="FontAwesome",
                         fontsize = 16,
                         margin_y = -1,
                         margin_x = 0,
@@ -290,24 +290,24 @@ def init_widgets_list():
                         foreground = colors[2],
                         background = colors[1]
                         ),
-               widget.Sep(
+            widget.Sep(
                         linewidth = 1,
                         padding = 10,
                         foreground = colors[2],
                         background = colors[1]
                         ),
-               widget.CurrentLayout(
-                        font = "Noto Sans Bold",
+            widget.CurrentLayout(
+                        font = "SauceCodePro Bold",
                         foreground = colors[5],
                         background = colors[1]
                         ),
-               widget.Sep(
+            widget.Sep(
                         linewidth = 1,
                         padding = 10,
                         foreground = colors[2],
                         background = colors[1]
                         ),
-               widget.WindowName(font="Noto Sans",
+            widget.WindowName(font="SauceCodePro Sans",
                         fontsize = 12,
                         foreground = colors[5],
                         background = colors[1],
@@ -356,20 +356,15 @@ def init_widgets_list():
                #          threshold = 80
                #          ),
                # # battery option 1  ArcoLinux Horizontal icons do not forget to import arcobattery at the top
-               widget.Sep(
-                         linewidth = 1,
-                         padding = 10,
-                         foreground = colors[2],
-                         background = colors[1]
-                         ),
-                arcobattery.BatteryIcon(
-                         padding=0,
-                         scale=0.7,
-                         y_poss=2,
-                         theme_path=home + "/.config/qtile/icons/battery_icons_horiz",
-                         update_interval = 5,
-                         background = colors[1]
-                         ),
+               
+            arcobattery.BatteryIcon(
+                        padding=0,
+                        scale=0.7,
+                        y_poss=2,
+                        theme_path=home + "/.config/qtile/icons/battery_icons_horiz",
+                        update_interval = 5,
+                        background = colors[1]
+                        ),
                # # battery option 2  from Qtile
                # widget.Sep(
                #          linewidth = 1,
@@ -423,20 +418,20 @@ def init_widgets_list():
                #          foreground = colors[2],
                #          background = colors[1]
                #          ),
-               widget.TextBox(
-                        font="FontAwesome",
-                        text="  ",
-                        foreground=colors[3],
-                        background=colors[1],
-                        padding = 0,
-                        fontsize=16
-                        ),
+               
                widget.Clock(
                         foreground = colors[5],
                         background = colors[1],
                         fontsize = 12,
                         format="%Y-%m-%d %H:%M"
                         ),
+
+             widget.Sep(
+                        linewidth = 1,
+                        padding = 10,
+                        foreground = colors[2],
+                        background = colors[1]
+                                                 ),
                # widget.Sep(
                #          linewidth = 1,
                #          padding = 10,

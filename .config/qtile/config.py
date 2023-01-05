@@ -31,7 +31,7 @@ import socket
 import subprocess
 from typing import List  # noqa: F401
 from libqtile import layout, bar, widget, hook
-from libqtile.config import Click, Drag, Group, Key, Match, Screen, Rule
+from libqtile.config import Click, Drag, Group, Key, Match, Screen, Rule, ScratchPad, DropDown
 from libqtile.command import lazy
 from libqtile.widget import Spacer
 import arcobattery
@@ -40,8 +40,13 @@ import arcobattery
 mod = "mod4"
 mod1 = "alt"
 mod2 = "control"
+altgr = "mod5"
 home = os.path.expanduser('~')
 
+# Programms
+
+Terminal ="alacritty"
+PassManager = "bitwarden-desktop"
 
 @lazy.function
 def window_to_prev_group(qtile):
@@ -181,6 +186,8 @@ keys.extend([
     Key([mod,"shift"], "Left", lazy.function(window_to_previous_screen, switch_screen=True)),
 ])
 
+#Groups
+
 groups = []
 
 # FOR QWERTY KEYBOARDS
@@ -204,8 +211,12 @@ for i in range(len(group_names)):
             label=group_labels[i],
         ))
 
+
+
 for i in groups:
     keys.extend([
+
+
 
 #CHANGE WORKSPACES
         Key([mod], i.name, lazy.group[i.name].toscreen()),
@@ -220,6 +231,17 @@ for i in groups:
         Key([mod, "shift"], i.name, lazy.window.togroup(i.name) , lazy.group[i.name].toscreen()),
     ])
 
+
+groups.append(ScratchPad('scratchpad',[
+    DropDown('term',Terminal, width=0.6, height=0.6, x=0.3, y=0.2, opacity=1),
+    DropDown('pass',PassManager, width=0.6, height=0.6, x=0.3, y=0.2, opacity=1),
+]))
+#ADD key for scratchpad
+keys.extend([
+    Key([altgr], "F11", lazy.group['scratchpad'].dropdown_toggle('term')),
+    Key([], "F12", lazy.group['scratchpad'].dropdown_toggle('pass')),
+
+])
 
 def init_layout_theme():
     return {"margin":5,

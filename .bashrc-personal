@@ -1,12 +1,24 @@
+# common aliasses
 alias cls='clear'
+alias ..='cd..'
+alias ...='cd ~'
+
+# Becode Toolbox
 alias bcd='cd ~/Documents/BeCode'
 alias BCD='cd ~/Documents/BeCode'
 alias setrepo='../../setrepo.sh'
-alias cls="clear"
+
+# Git aliasses
 alias gp="git push"
 alias gaa="git add *"
 alias gc='git commit -m'
 alias config='/usr/bin/git --git-dir=/home/sulumar/.dotfiles/ --work-tree=/home/sulumar'
+
+# Laravel 
+
+alias sail='./vendor/bin/sail'
+
+# Transparency toggel
 alias troff='killall picom'
 alias tron='picom -b --config ~/.config/qtile/scripts/picom.conf'
 export PATH=$HOME/Scripts:$PATH

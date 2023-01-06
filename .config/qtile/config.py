@@ -244,10 +244,10 @@ keys.extend([
 ])
 
 def init_layout_theme():
-    return {"margin":5,
+    return {"margin":7,
             "border_width":2,
-            "border_focus": "#232b2b",
-            "border_normal": "#3b444b"
+            "border_focus": "#B192E7",
+            "border_normal": "#494779"
             }
 
 layout_theme = init_layout_theme()

@@ -22,3 +22,4 @@ alias sail='./vendor/bin/sail'
 alias troff='killall picom'
 alias tron='picom -b --config ~/.config/qtile/scripts/picom.conf'
 export PATH=$HOME/Scripts:$PATH
+export PATH=$HOME/.local/share/JetBrains/Toolbox/scripts:$PATH

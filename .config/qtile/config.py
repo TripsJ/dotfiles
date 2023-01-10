@@ -45,7 +45,7 @@ home = os.path.expanduser('~')
 
 # Programms
 
-Terminal ="alacritty"
+Terminal ="alacritty -e bash --rcfile .bash_intelliJ.rc"
 PassManager = "bitwarden-desktop"
 
 @lazy.function
@@ -234,12 +234,12 @@ for i in groups:
 
 groups.append(ScratchPad('scratchpad',[
     DropDown('term',Terminal, width=0.6, height=0.6, x=0.3, y=0.2, opacity=1),
-    DropDown('pass',PassManager, width=0.6, height=0.6, x=0.3, y=0.2, opacity=1),
+    DropDown('bitwarden', 'bitwarden-desktop', width=0.4, height=0.6, x=0.3, y=0.1, opacity=1),
 ]))
 #ADD key for scratchpad
 keys.extend([
     Key([altgr], "F11", lazy.group['scratchpad'].dropdown_toggle('term')),
-    Key([], "F12", lazy.group['scratchpad'].dropdown_toggle('pass')),
+    Key([altgr], "F12", lazy.group['scratchpad'].dropdown_toggle('bitwarden')),
 
 ])
 
@@ -591,6 +591,7 @@ floating_layout = layout.Floating(float_rules=[
     Match(wm_class='feh'),
     Match(wm_class='Galculator'),
     Match(wm_class='archlinux-logout'),
+#    Match(wm_class="bitwarden"),
     Match(wm_class='xfce4-terminal'),
 
 ],  fullscreen_border_width = 0, border_width = 0)

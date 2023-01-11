@@ -46,7 +46,7 @@ home = os.path.expanduser('~')
 # Programms
 
 Terminal ="alacritty -e bash --rcfile .bash_intelliJ.rc"
-PassManager = "bitwarden-desktop"
+PassManager = "bitwarden"
 
 @lazy.function
 def window_to_prev_group(qtile):
@@ -234,7 +234,7 @@ for i in groups:
 
 groups.append(ScratchPad('scratchpad',[
     DropDown('term',Terminal, width=0.6, height=0.6, x=0.3, y=0.2, opacity=1),
-    DropDown('bitwarden', 'bitwarden-desktop', width=0.4, height=0.6, x=0.3, y=0.1, opacity=1),
+    DropDown('bitwarden',PassManager , width=0.4, height=0.6, x=0.3, y=0.1, opacity=1),
 ]))
 #ADD key for scratchpad
 keys.extend([
@@ -591,8 +591,8 @@ floating_layout = layout.Floating(float_rules=[
     Match(wm_class='feh'),
     Match(wm_class='Galculator'),
     Match(wm_class='archlinux-logout'),
-#    Match(wm_class="bitwarden"),
-    Match(wm_class='xfce4-terminal'),
+    Match(wm_class='bitwarden'),
+    Match(wm_class='alacritty'),
 
 ],  fullscreen_border_width = 0, border_width = 0)
 auto_fullscreen = True

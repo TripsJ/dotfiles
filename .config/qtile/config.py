@@ -244,7 +244,7 @@ keys.extend([
 ])
 
 def init_layout_theme():
-    return {"margin":7,
+    return {"margin":4,
             "border_width":2,
             "border_focus": "#B192E7",
             "border_normal": "#494779"
@@ -255,18 +255,16 @@ layout_theme = init_layout_theme()
 
 layouts = [
     #layout.MonadTall(margin=8, border_width=2, border_focus="#5e81ac", border_normal="#4c566a"),
-    layout.MonadTall(**layout_theme),
+    layout.MonadTall(**layout_theme,name="MasterStack"),
     #layout.MonadWide(margin=8, border_width=2, border_focus="#5e81ac", border_normal="#4c566a"),
     layout.MonadWide(**layout_theme),
     layout.Matrix(**layout_theme),
-    layout.Bsp(**layout_theme),
-    layout.Floating(**layout_theme),
-    layout.RatioTile(**layout_theme),
+    layout.TreeTab(**layout_theme,panel_width=50,vspace=2),
     layout.Max(**layout_theme)
 ]
 
 # COLORS FOR THE BAR
-#Theme name : ArcoLinux Default
+#Theme name : Shadow Grey
 def init_colors():
     return [["#3b444b", "#3b444b"], # color 0
             ["#3b444b", "#3b444b"], # color 1
@@ -319,7 +317,7 @@ def init_widgets_list():
                         background = colors[1]
                         ),
             widget.CurrentLayout(
-                        font = "SauceCodePro Bold",
+                        font = "FiraCode Bold",
                         foreground = colors[5],
                         background = colors[1]
                         ),
@@ -329,7 +327,7 @@ def init_widgets_list():
                         foreground = colors[2],
                         background = colors[1]
                         ),
-            widget.WindowName(font="SauceCodePro Sans",
+            widget.WindowName(font="FiraCode Sans",
                         fontsize = 12,
                         foreground = colors[5],
                         background = colors[1],
